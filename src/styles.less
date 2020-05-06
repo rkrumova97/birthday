@@ -1,1 +1,530 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle, darken(#5B86E5, 10%), #36D1DC, #5B86E5, blue);
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: -10em auto 0 auto;
+}
+
+/* ============================================== Candle
+*/
+
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 228px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+}
+.fuego:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+.fuego:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.text {
+  color: #FFFA32;
+  font-family: "Comic Sans MS", fantasy;
+  font-style:italic;
+  text-align: center;
+}
+
+.text>h1 {
+  font-size: 1.4em;
+}
+
+.one {
+  position: absolute;
+  left: 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.one #button {
+  width: 122px;
+  padding: 6px;
+  height: 90px;
+  color: greenyellow;
+  font-family: "Comic Sans MS", fantasy;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: #fff 2px solid;
+  overflow: hidden;
+  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #fff;
+}
+.one #button:hover {
+  text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 8px 8px 0px #4568DC, -8px -8px 0px #4568DC;
+}
+.one #button:hover .one {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.one #button:hover .two {
+  transform: translate3d(0px, 0px, 0px);
+}
+.one #button:hover .three {
+  transform: translate3d(0px, 0px, 0px);
+}
+.one #button:hover .four {
+  transform: translate3d(0px, 0px, 0px);
+}
+.one #button .ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 50%;
+  transform: translate3d(0px, 90px, 0px);
+}
+.one #button .one {
+  background-color: #FE6B26;
+  -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -3;
+  z-index: -4;
+}
+.one #button .two {
+  background-color: #FE8EFE;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -3;
+}
+.one #button .three {
+  background-color: #841EE4;
+  z-index: -2;
+  -webkit-transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -3;
+}
+.one #button .four {
+  background-color: #3E12FD;
+  z-index: -1;
+  -webkit-transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -3;
+}
+
+.two {
+  top: 400px;
+  left: 0;
+  background: url(https://images.unsplash.com/photo-1470093851219-69951fcbb533?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d40a9b070414fc8088992b91563b17ef) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.two #button {
+  width: 122px;
+  padding: 16px;
+  height: 50px;
+  color: #FFFA32;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  overflow: hidden;
+  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #4568DC;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  border: #594A83 solid 8px;
+  z-index: 0;
+}
+.two #button::after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#00F260), to(transparent));
+  background-image: -webkit-linear-gradient(left,#00F260, transparent);
+  background-image: -moz-linear-gradient(left, #00F260, transparent);
+  background-image: -o-linear-gradient(left, #00F260, transparent);
+  z-index: -1;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+.two #button:hover::after {
+  width: 800%;
+}
+.two #button:hover {
+  color: #4568DC;
+  box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.6);
+}
+
+.three {
+  z-index: -1;
+  top: 800px;
+  left: 0;
+  background: url(https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=a9ed512366462aff761f7c04ac383675) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.three #button {
+  width: 122px;
+  padding: 16px;
+  height: 50px;
+  color: #FFFA32;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #4568DC;
+  z-index: 0;
+}
+.three #button .ring {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #4568DC;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  top: 40%;
+  left: 45%;
+  -webkit-transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  transform: perspective(500px) translate3d(0px, 0px, 0px);
+  opacity: 0.0;
+}
+.three #button:hover .one {
+  transform: perspective(500px) translate3d(-90px, -50px, 150px);
+  opacity: 1;
+}
+.three #button:hover .two {
+  transform: perspective(800px) translate3d(-130px, 50px, 180px);
+  opacity: 0.6;
+}
+.three #button:hover .three {
+  transform: perspective(800px) translate3d(130px, 50px, 30px);
+  opacity: 0.2;
+}
+.three #button:hover .four {
+  transform: perspective(800px) translate3d(130px, -120px, 80px);
+  opacity: 0.9;
+}
+.three #button::after {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  content: "";
+  background: #4568DC;
+  z-index: -1;
+  transform: perspective(800px) scale(0) rotate(0deg);
+  -webkit-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.three #button:before {
+  position: absolute;
+  top: -40px;
+  left: -6px;
+  width: 160px;
+  height: 160px;
+  border: solid 1px #4568DC;
+  content: "";
+  background: transparent;
+  z-index: -1;
+  transform: perspective(800px) scale(0.4) rotate(0deg);
+  -webkit-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.three #button:hover::after {
+  transform: perspective(800px) scale(1) rotate(600deg);
+}
+.three #button:hover::before {
+  transform: perspective(800px) scale(1) rotate(-100deg);
+}
+.three #button:hover {
+  color:#FFFA32;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#a80077, #283c86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brace {
+  width: auto;
+  min-width: 35px;
+  padding-bottom: 20px;
+  font-size: 2em;
+  line-height: 2em;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 15px 15px;
+  border: none;
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle at 0 0, rgba(red,0) 14.5px,  15.5px,  19.5px, rgba(red,0) 20.5px),
+    radial-gradient(circle at 35px 0, rgba(red,0) 14.5px,  15.5px,  19.5px, rgba(red,0) 20.5px);
+  background-size: 35px 20px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  text-transform: lowercase;
+  font-style: italic;
+  color: red;
+  filter: drop-shadow(0 1px 1px rgba(black,.15));
+  overflow: visible;
+
+  &:before {
+    width: 50%;
+    border-top: 10px solid red;
+    border-left: 500px solid transparent; /* play with this until you like the look of it */
+    border-top-left-radius: 20% 30px;
+    height: 100%;
+    content: "";
+    absolute: top red left -15px;
+    box-sizing: border-box;
+    margin-top: -5px;
+  }
+
+  &:after {
+    width: 50%;
+    border-top: 10px solid;
+    border-right: 500px solid transparent; /* play with this until you like the look of it */
+    border-top-right-radius: 20% 30px;
+    height: 100%;
+    content: "";
+    absolute: top red right -15px;
+    box-sizing: border-box;
+    margin-top: -5px;
+  }
+}
+
+#balloon {
+  background-image: url(https://i.imgur.com/QJZPw2X.png);
+  width: 180px;
+  height: 300px;
+  background-size: contain;
+  position: absolute;
+  bottom: 0%;
+  animation: move_y 30s linear forwards, oscil1 6s infinite;
+  left: 5%;
+}
+
+@keyframes move_y {
+  from {
+    bottom: -10%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes oscil1 {
+  from {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  25% {
+    translate: 10px 0;
+    transform: rotate(3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  50% {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  75% {
+    translate: -10px 0;
+    transform: rotate(-3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  to {
+    translate: 0 0;
+    transform: rotate(0deg);
+  }
+}
+
+
+#balloon1 {
+  background-image: url(https://i.imgur.com/QJZPw2X.png);
+  width: 180px;
+  height: 300px;
+  background-size: contain;
+  position: absolute;
+  bottom: 0%;
+  animation: move_y 30s linear forwards, oscil1 6s infinite;
+  left: 85%;
+}
+
+@keyframes move_y {
+  from {
+    bottom: -10%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes oscil1 {
+  from {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  25% {
+    translate: 10px 0;
+    transform: rotate(3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  50% {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  75% {
+    translate: -10px 0;
+    transform: rotate(-3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  to {
+    translate: 0 0;
+    transform: rotate(0deg);
+  }
+}
