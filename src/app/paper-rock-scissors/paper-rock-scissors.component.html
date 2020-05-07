@@ -1,0 +1,24 @@
+<div class="score-board">
+  <div class="badge" id="user-label">user : {{userSelected}}</div>
+  <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+  <span id="user-score">{{userScore}}</span>:<span id="comp-score">{{compScore}}</span>
+</div>
+
+<div class="result">
+  <p *ngIf="status">{{userSelected}} {{action}} {{compSelected}}{{status}} </p>
+</div>
+
+<div class="choices">
+  <div class="choice" id="rock">
+    <img src="https://static.thenounproject.com/png/477918-200.png" (click)='userPick("rock")'>
+  </div>
+  <div class="choice" id="paper">
+    <img src="https://static.thenounproject.com/png/477922-200.png" (click)='userPick("paper")'>
+  </div>
+  <div class="choice" id="scissors">
+    <img src="https://static.thenounproject.com/png/477919-200.png" (click)='userPick("scissors")'>
+  </div>
+</div>
+
+<p id="action-message1" *ngIf="!status">You Can Make Your Move</p>
+<p id="action-message2" *ngIf="status">Wait...</p>
